@@ -1,14 +1,17 @@
 const { Builder, By, Key, until } = require("selenium-webdriver");
+const assert = require("assert");
 describe("UAS Generator", function() {
   this.timeout(30000);
   let driver;
   let vars;
   beforeEach(async function() {
     driver = await new Builder().forBrowser("chrome").build();
-    await driver.manage().setTimeouts({ implicit: 800000 });
+    await driver.manage().setTimeouts({ implicit: 15000 });
     vars = {};
   });
-  afterEach(async function() {});
+  afterEach(async function() {
+    //await driver.quit();
+  });
   it("generates and Validates User Auth String", async function() {
     await driver.get(
       "https://cstools.flynn-qa-us-east-1.nexus.bazaarvoice.com/"
@@ -26,7 +29,7 @@ describe("UAS Generator", function() {
     await driver.findElement(By.id("username")).click();
     await driver.findElement(By.id("username")).sendKeys("NameUser");
     await driver.findElement(By.id("maxage")).click();
-    await driver.findElement(By.id("maxage")).sendKeys("33");
+    await driver.findElement(By.id("maxage")).sendKeys("45");
     await driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
     await driver.findElement(By.css(".FormTextArea")).click();
     vars["UAS"] = await driver
@@ -34,14 +37,9 @@ describe("UAS Generator", function() {
       .getText();
     await driver.findElement(By.css(".FormTextArea")).sendKeys(vars["UAS"]);
     await driver.findElement(By.css(".normal")).click();
-    (await driver.findElement(By.css(".success > .\\_Rfxe_")).getText()) ===
-      "success!";
-  });
-
-  it("opens Feed Manager Lite", async function() {
-    await driver.get(
-      "https://cstools.flynn-qa-us-east-1.nexus.bazaarvoice.com/"
+    assert(
+      (await driver.findElement(By.css(".success > .\\_Rfxe_")).getText()) ==
+        "success!"
     );
-    await driver.findElement(By.linkText("Feed Manager Lite")).click();
   });
 });
