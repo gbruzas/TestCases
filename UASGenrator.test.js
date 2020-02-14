@@ -5,7 +5,7 @@ describe("UAS Generator", function() {
   let vars;
   beforeEach(async function() {
     driver = await new Builder().forBrowser("chrome").build();
-    await driver.manage().setTimeouts({ implicit: 800000 });
+    await driver.manage().setTimeouts({ implicit: 30000 });
     vars = {};
   });
   afterEach(async function() {});
@@ -38,10 +38,10 @@ describe("UAS Generator", function() {
       "success!";
   });
 
-  it("opens Feed Manager Lite", async function() {
-    await driver.get(
-      "https://cstools.flynn-qa-us-east-1.nexus.bazaarvoice.com/"
-    );
-    await driver.findElement(By.linkText("Feed Manager Lite")).click();
-  });
+  // it("opens Feed Manager Lite", async function() {
+  //   await driver.get(
+  //     "https://cstools.flynn-qa-us-east-1.nexus.bazaarvoice.com/"
+  //   );
+  //   await driver.findElement(By.linkText("Feed Manager Lite")).click();
+  // });
 });
