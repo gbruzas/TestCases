@@ -1,3 +1,4 @@
-# TestCases
+# TestCase
 
-generates and Validates User Auth String"
+
+generates and Validates User Auth String
