@@ -42,11 +42,4 @@ describe("UAS Generator", function() {
         "success!"
     );
   });
-
-  // it("opens Feed Manager Lite", async function() {
-  //   await driver.get(
-  //     "https://cstools.flynn-qa-us-east-1.nexus.bazaarvoice.com/"
-  //   );
-  //   await driver.findElement(By.linkText("Feed Manager Lite")).click();
-  // });
 });
