@@ -1,5 +1,5 @@
 {
-  "name": "Escape Tool",
+  "name": "EscapeTool",
   "version": "1.0.0",
   "description": "UAS Generatos testing case from CS Tool.",
   "main": "genUas.test.js",
