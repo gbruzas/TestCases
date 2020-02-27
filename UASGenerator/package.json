@@ -7,7 +7,7 @@
     "@seleniumhq/side-utils": "^3.16.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "chromedriver": "^78.0.1",
+    "chromedriver": "^80.0.1",
     "mocha": "^6.2.2"
   },
   "devDependencies": {
@@ -20,6 +20,6 @@
   "scripts": {
     "test": "mocha **/*.test.js --reporter mochawesome"
   },
-  "author": "gbruzas",
-  "license": "ISC"
+  "author": "",
+  "license": ""
 }
