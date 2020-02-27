@@ -9,9 +9,7 @@ describe("UAS Generator", function() {
     await driver.manage().setTimeouts({ implicit: 15000 });
     vars = {};
   });
-  afterEach(async function() {
-    //await driver.quit();
-  });
+  afterEach(async function() {});
   it("generates and Validates User Auth String", async function() {
     await driver.get(
       "https://cstools.flynn-qa-us-east-1.nexus.bazaarvoice.com/"
