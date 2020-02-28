@@ -8,6 +8,6 @@ generates and Validates User Auth String
 2. npm i
 3. npm test
 
-# Run test
+# Test case report
 
 Check for the report mochawesome-report -> mochawesome.html
