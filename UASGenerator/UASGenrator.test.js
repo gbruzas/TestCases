@@ -1,5 +1,7 @@
 const { Builder, By, Key, until } = require("selenium-webdriver");
 const assert = require("assert");
+const addContext = require("mochawesome/addContext");
+
 describe("UAS Generator", function() {
   this.timeout(30000);
   let driver;
@@ -28,7 +30,7 @@ describe("UAS Generator", function() {
     await driver.findElement(By.id("username")).sendKeys("NameUser");
     await driver.findElement(By.id("maxage")).click();
     await driver.findElement(By.id("maxage")).sendKeys("45");
-    await driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+    await driver.findElement(By.css(".Button:nth-child(3)")).click();
     await driver.findElement(By.css(".FormTextArea")).click();
     vars["UAS"] = await driver
       .findElement(By.css(".TextBlock:nth-child(2) > code"))
@@ -39,5 +41,7 @@ describe("UAS Generator", function() {
       (await driver.findElement(By.css(".success > .\\_Rfxe_")).getText()) ==
         "success!"
     );
+    addContext(this, "UAS used in this test case:");
+    addContext(this, vars["UAS"]);
   });
 });
