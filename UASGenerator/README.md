@@ -10,4 +10,6 @@ generates and Validates User Auth String
 
 # Test case report
 
-Check for the report mochawesome-report -> mochawesome.html
+Check for the report mochawesome-report -> mochawesome.html 
+
+
