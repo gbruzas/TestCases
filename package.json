@@ -13,7 +13,7 @@
     "mochawesome": "^4.1.0"
   },
   "scripts": {
-    "test-uas": "cd UASGenerator && mocha **/*.test.js --reporter mochawesome"
+    "test-uas": "cd UASGenerator && mocha **/*.test.js --reporter mochawesome --reporter-options autoOpen=true"
   },
   "author": "",
   "license": ""
