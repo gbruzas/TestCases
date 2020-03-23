@@ -1,7 +1,6 @@
 const chrome = require("selenium-webdriver/chrome");
 const { Builder, By, until } = require("selenium-webdriver");
 const assert = require("assert");
-const report = require("multiple-cucumber-html-reporter");
 
 // const screen = {
 //   width: 1900,
