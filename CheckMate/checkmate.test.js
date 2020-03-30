@@ -37,31 +37,31 @@ describe("Checkmate Test", function() {
       30000
     );
   });
-  it("checks Page info table is present", async function() {
+  it("checks whether the Page info table is present", async function() {
     const pageInfo = await driver.findElements(
       By.css(".\\_Rfx5_ > div > div:nth-child(1)")
     );
     assert(pageInfo.length);
   });
-  it("checks $BVConfigure table is present", async function() {
+  it("checks whether $BVConfigure table is present", async function() {
     const BVConfigure = await driver.findElements(
       By.css(".\\_Rfx5_ > div > div:nth-child(2)")
     );
     assert(BVConfigure.length);
   });
-  it("checks BVRRContainer tableis present", async function() {
+  it("checks whether BVRRContainer table is present", async function() {
     const BVRRContainer = await driver.findElements(
       By.css(".\\_Rfx5_ > div > div:nth-child(3)")
     );
     assert(BVRRContainer.length);
   });
-  it("checks SEO Sting is present table", async function() {
+  it("checks whether SEO Sting table is present", async function() {
     const seoString = await driver.findElements(
       By.css(".\\_Rfx5_ > div > div:nth-child(3)")
     );
     assert(seoString.length);
   });
-  it("checks BV Script is present table", async function() {
+  it("checks whether BV Script table is present", async function() {
     const bvScript = await driver.findElements(
       By.css(".\\_Rfx5_ div:nth-child(5)")
     );
