@@ -2,12 +2,12 @@
   "name": "EscapeTool",
   "version": "1.0.0",
   "description": "UAS Generatos testing case from CS Tool.",
-  "main": "genUas.test.js",
+  "main": "EscapeTool.test.js",
   "dependencies": {
     "@seleniumhq/side-utils": "^3.16.0",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "chromedriver": "^78.0.1",
+    "chromedriver": "^80.0.1",
     "mocha": "^6.2.2"
   },
   "devDependencies": {
@@ -18,7 +18,7 @@
     "mochawesome": "^4.1.0"
   },
   "scripts": {
-    "test": "mocha **/*.test.js --reporter mochawesome"
+    "test": "mocha **/*.test.js --timeout 30000 --reporter mochawesome --reporter-options autoOpen=true"
   },
   "author": "gbruzas",
   "license": "ISC"
