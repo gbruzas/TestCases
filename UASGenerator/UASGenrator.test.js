@@ -1,24 +1,24 @@
 const { Builder, By, until, Key } = require("selenium-webdriver");
 const assert = require("assert");
 const addContext = require("mochawesome/addContext");
-
 const driver = new Builder().forBrowser("chrome").build();
-describe("UAS Generator", function() {
-  it("passed/failed/skipped", function() {
+
+describe("UAS Generator", function () {
+  it("passed/failed/skipped", function () {
     addContext(this, "???Pie Charts???");
   });
-  it("should open CS tools", async function() {
+  it("should open CS tools", async function () {
     driver.get("https://cstools.flynn-qa-us-east-1.nexus.bazaarvoice.com/");
     const title = await driver.findElement(By.xpath("//span[2]")).getText();
     assert.equal(title, "Home");
   });
-  it("Should open UAs Generator Tool", async function() {
+  it("Should open UAs Generator Tool", async function () {
     await driver.findElement(By.linkText("UAS Generator")).click();
   });
-  it("Schould select the 'testCustomer-47' client", async function() {
+  it("Schould select the 'testCustomer-47' client", async function () {
     await driver.findElement(By.css("input")).sendKeys("TestCustomer");
   });
-  it("Should load client info", async function() {
+  it("Should load client info", async function () {
     await driver.findElement(By.css(".Button")).click();
   });
 });

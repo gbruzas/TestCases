@@ -18,3 +18,5 @@ Example:
 # Outcome
 
 Check test report under mochawesome-report -> mochawesome.html/mochawesome.json
+
+Zilviniukas mokosi
